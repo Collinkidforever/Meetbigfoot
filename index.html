@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MeetBigfoot</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>MeetBigfoot</h1>
+    <div class="tabs">
+        <div class="tab" onclick="openTab('home')">Home</div>
+        <div class="tab" onclick="openTab('submit')">Submit Sighting</div>
+        <div class="tab" onclick="openTab('map')">Map</div>
+        <div class="tab" onclick="openTab('gallery')">Gallery</div>
+        <div class="tab" onclick="openTab('list')">Sightings List</div>
+    </div>
+
+    <div id="home" class="tab-content">
+        <h2>Welcome to MeetBigfoot</h2>
+        <p>Share your Bigfoot sightings and explore reports from others.</p>
+        <img src="bigfoot-forest.jpg" alt="Bigfoot in the forest">
+    </div>
+
+    <div id="submit" class="tab-content">
+        <h2>Submit a Sighting</h2>
+        <form id="sightingForm">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="map" class="tab-content">
+        <h2>Map of Sightings</h2>
+        <div id="mapContainer"></div>
+    </div>
+
+    <div id="gallery" class="tab-content">
+        <h2>Gallery</h2>
+        <div id="galleryContainer"></div>
+    </div>
+
+    <div id="list" class="tab-content">
+        <h2>Sightings List</h2>
+        <div id="listContainer"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
